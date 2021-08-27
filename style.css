@@ -24,41 +24,39 @@
 
 body {
     font-size: 15px;
-    background-color: var(--Very-light-gray);   
+    background-color: var(--Very-light-gray); 
+    height: 100vh;  
 }
 
 main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-
+    height: 97vh;
+    
 }
-
-.container {
-    display: flex;
-
-    width: 90vw;
-    max-width: 900px;
-}
-
 
 .cards {
+    display: flex;
+    width: 90vw;
+    max-width: 800px;
+}
+
+.card {
     padding: 2.25rem;  
     
     flex: 1;
 }
 
-.cards:nth-child(1) {
+.card:nth-child(1) {
     background-color: var(--Bright-orange);
-    /* border-radius: 1rem; */
 }
 
-.cards:nth-child(2) {
+.card:nth-child(2) {
     background-color: var(--Dark-cyan);
 }
 
-.cards:nth-child(3) {
+.card:nth-child(3) {
     background-color: var(--Very-dark-cyan);
 }
 
@@ -111,15 +109,16 @@ main {
 }
 
 /* ### FOOTER */
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+footer .attribution { font-size: 11px; text-align: center; }
+
+footer .attribution a { color: hsl(165, 89%, 41%); }
 
 
 /* ###  RESPONSIVO */
 
 /* Menor que 780px aplique essa "estilização" */
 @media (max-width: 780px) {
-    .cards {
+    .card {
         padding: 2rem 1rem;
     }
 
@@ -131,23 +130,27 @@ main {
 
 @media (max-width: 600px) {
    
-    .container { 
+    .cards { 
         flex-direction: column;
         height: 100vh;
         text-align: center;
     }
 
-    .cards {
+    .card {
         padding: 2rem;
     }
 
     .button{
         padding: 1rem 2.5rem;
-    }   
+    }  
+
+    footer {
+        display: none;
+    }
 }
 
 @media (max-width: 400px) {
-    .container {
+    .cards {
     text-align: start;
     }
 
