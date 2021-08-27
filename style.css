@@ -33,6 +33,7 @@ main {
     align-items: center;
     justify-content: center;
     height: 97vh;
+    /* border-radius: 1rem; */
     
 }
 
@@ -40,6 +41,7 @@ main {
     display: flex;
     width: 90vw;
     max-width: 800px;
+    border-radius: 50px;
 }
 
 .card {
@@ -50,6 +52,7 @@ main {
 
 .card:nth-child(1) {
     background-color: var(--Bright-orange);
+    border-radius: 1rem 0 0 1rem;
 }
 
 .card:nth-child(2) {
@@ -58,6 +61,7 @@ main {
 
 .card:nth-child(3) {
     background-color: var(--Very-dark-cyan);
+    border-radius: 0 1rem 1rem 0;
 }
 
 .title {
@@ -146,6 +150,14 @@ footer .attribution a { color: hsl(165, 89%, 41%); }
 
     footer {
         display: none;
+    }
+
+    .card:nth-child(1){
+        border-radius: 0px;
+    }
+    
+    .card:nth-child(3) {
+        border-radius: 0px;
     }
 }
 
